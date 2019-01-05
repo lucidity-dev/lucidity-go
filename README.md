@@ -1,2 +1,2 @@
 # luciditygo
-Go library for lucidiyt projects.
+Go library for lucidity projects.
