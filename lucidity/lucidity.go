@@ -44,7 +44,7 @@ func Connect() {
 	}
 }
 
-func GetTopicSocket(topic String, mode SocketType) (mangos.Socket, error) {
+func GetTopicSocket(topic string, mode SocketType) (mangos.Socket, error) {
 	url := getTopicURL(topic)
 
 	switch mode {
