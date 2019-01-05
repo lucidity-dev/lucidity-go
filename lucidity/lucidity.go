@@ -73,6 +73,12 @@ func GetTopicSocket(topic String, mode SocketType) (mangos.Socket, error) {
 			log.Fatalf("Error: can't get new pub socket: %s \n")
 			os.Exit(-1)
 		}
+
+		err = socket.SetOption(mangos.OptionSubscribe, []byte(""))
+		if err != nil {
+			log.Fatalf("Error: can't subscribe: %s", err)
+		}
+
 		return socket, nil
 	default:
 		var socket mangos.Socket
